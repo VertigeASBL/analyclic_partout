@@ -1,0 +1,17 @@
+<paquet
+	  prefix="analyclic_partout"
+	  categorie="statistique"
+	  version="1.0.0"
+	  etat="test"
+	  compatibilite="[3.0.17;3.0.*]"
+	  logo=""
+	  documentation=""
+    >
+
+	<nom>Analyclic Partout</nom>
+
+	<auteur>Michel @ Vertige ASBL</auteur>
+
+	<licence>GNU/GPL</licence>
+
+</paquet>
