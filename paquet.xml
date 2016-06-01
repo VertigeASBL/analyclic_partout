@@ -5,7 +5,7 @@
 	  etat="test"
 	  compatibilite="[3.0.17;3.0.*]"
 	  logo=""
-	  documentation=""
+	  documentation="https://github.com/VertigeASBL/analyclic_partout"
     >
 
 	<nom>Analyclic Partout</nom>
