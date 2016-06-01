@@ -14,4 +14,9 @@
 
 	<licence>GNU/GPL</licence>
 
+  <necessite nom="anaclic" compatibilite="[0.2.0;]" />
+
+  <pipeline nom="pre_liens" inclure="analyclic_partout_pipelines.php" />
+  <pipeline nom="declarer_tables_interfaces" inclure="analyclic_partout_pipelines.php" />
+
 </paquet>
