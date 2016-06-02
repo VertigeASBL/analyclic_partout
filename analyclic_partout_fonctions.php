@@ -21,6 +21,11 @@ function expanser_lien_document_compteur($matches) {
 	$raccourci = $matches[0];
 	$lien = end($matches);
 
+	/* On ne compte pas les téléchargement depuis l'espace privé. */
+	if (test_espace_prive()) {
+		return $raccourci;
+	}
+
 	if (strpos($lien, 'doc') === 0) {
 		$id_doc = substr($lien, 3);
 		$url_doc_compteur = generer_url_action('telecharger', 'arg='.$id_doc, true);
@@ -37,6 +42,11 @@ function expanser_lien_document_compteur($matches) {
  * téléchargements
  */
 function traiter_URL_DOCUMENT_compteur($url_doc) {
+
+	/* On ne compte pas les téléchargements depuis l'espace privé. */
+	if (test_espace_prive()) {
+		return $url_doc;
+	}
 
 	/* On retrouve le fichier tel qu'enregistré dans la table spip_documents.
 	 * Par chance, cette méthode fonctionne aussi avec les documents distants \o/ */
